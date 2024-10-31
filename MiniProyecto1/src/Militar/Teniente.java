@@ -4,7 +4,7 @@ public class Teniente extends Soldado {
     private String unidad;
 
     public Teniente(String nombre, String id, String unidad) {
-        super(nombre, id, new Rango(4) {
+        super(nombre, id, new Rango(2) {
             @Override
             public void realizarAccion() {
                 System.out.println("El Teniente se reporta a su unidad");
@@ -15,10 +15,10 @@ public class Teniente extends Soldado {
 
     @Override
     public void mostrarinformacion(){
-        System.out.println("Nombre: " + nombre);
-        System.out.println("ID: " + id);
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("ID: " + getId());
         System.out.println("Rango: " +  rango.getRango());
-        System.out.println("Unidad: " +  unidad);
+        System.out.println("Unidad: " +  getUnidad());
     }
 
     public String getUnidad() {

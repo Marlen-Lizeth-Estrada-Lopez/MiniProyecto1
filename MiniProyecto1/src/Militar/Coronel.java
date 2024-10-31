@@ -15,10 +15,10 @@ public class Coronel extends Soldado {
 
     @Override
     public void mostrarinformacion(){
-        System.out.println("Nombre: " + nombre);
-        System.out.println("ID: " + id);
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("ID: " + getId());
         System.out.println("Rango: " +  rango.getRango());
-        System.out.println("Estrategia: " + estrategia);
+        System.out.println("Estrategia: " + getEstrategia());
     }
 
     public String getEstrategia() {
