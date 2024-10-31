@@ -6,6 +6,9 @@ public class Soldado {
     Rango rango;
 
     public Soldado(String nombre, String id, Rango rango) {
+        this.nombre = nombre;
+        this.id = id;
+        this.rango = rango;
     }
 
     public void mostrarinformacion(){

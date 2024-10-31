@@ -34,12 +34,8 @@ abstract public class Rango {
     };
 
     public String getRango(){
+        definir_rango(nivel);
         return rangoString;
     }
 
 }
-
-//al ser protected permite que las subclases puedan acceder a este y 
-//que otras partes del programa no puedan modificarlo
-// si fuera public cualquier parte del programa podia modificarlo lo cual puede generar inconvenientes
-// asi nos aseguramos que el nivel solo pueda ser tocado por las clases hijas

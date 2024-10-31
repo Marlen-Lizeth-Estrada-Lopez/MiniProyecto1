@@ -44,7 +44,7 @@ public class App {
                 String nombreCapitan = scanner.nextLine();
                 System.out.print("Digite el ID: ");
                 String idCapitan = scanner.nextLine();
-                System.out.print("Digite la unidad del teniente: ");
+                System.out.print("Digite la cantidad de soldados bajo el mando del capitan: ");
                 int cantidadSoladosBajoSuMando  = scanner.nextInt();
                 scanner.nextLine();
                 Capitan capitan = new Capitan(nombreCapitan, idCapitan, cantidadSoladosBajoSuMando);
@@ -92,33 +92,6 @@ public class App {
                 String idnuevo = scanner.nextLine();
                 i.setNombre(nombrenuevo);
                 i.setId(idnuevo);
-                System.out.println("Digite el nuevo nivel (si es el mismo dijite el que tenia)");
-                int nivel = scanner.nextInt();
-                if(nivel == 2){
-                    Teniente teniente = (Teniente) i;
-                    System.out.print("Digite la nueva unidad del Teniente: ");
-                    String unidad = scanner.nextLine();
-                    teniente.setUnidad(unidad);
-                    int indice = ListaSoldados.indexOf(i);
-                    ListaSoldados.add(indice, teniente);
-                }
-                else if(nivel == 3){
-                    Capitan capitan  = (Capitan) i;
-                    System.out.print("Digite la nueva cantidad de soldados del capitan: ");
-                    int nuevaCantidadSoladosBajoSuMando = scanner.nextInt();
-                    scanner.nextLine();
-                    capitan.setCantidadSoladosBajoSuMando(nuevaCantidadSoladosBajoSuMando);
-                    int indice = ListaSoldados.indexOf(i);
-                    ListaSoldados.add(indice, capitan);
-                }
-                else if(nivel == 4){
-                    Coronel coronel = (Coronel) i;
-                    System.out.print("Digite la nueva estrategia del coronel: ");
-                    String estrategia = scanner.nextLine();
-                    coronel.setEstrategia(estrategia);
-                    int indice = ListaSoldados.indexOf(i);
-                    ListaSoldados.add(indice, coronel);
-                }
             System.out.println("La actualizacion se ha realizado con exito");
             }
         }
@@ -180,5 +153,6 @@ public class App {
         App app = new App();
         app.menu(ListaSoldados, scanner);
         scanner.close();
+
     }
 }
